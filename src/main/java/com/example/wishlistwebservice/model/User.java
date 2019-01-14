@@ -17,7 +17,7 @@ import java.util.List;
 @EntityListeners(AuditingEntityListener.class)
 public class User implements Serializable {
 
-    @Id
+       @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long person_id;
 
@@ -30,7 +30,6 @@ public class User implements Serializable {
     private String surname;
 
     @NotNull
-    @Email
     @Column(unique = true)
     private String email;
 
